@@ -5,23 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cordel Moderno</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+        :root{
+            --font1 : Verdana, Geneva, Tahoma, sans-serif;
+            --font2: 'Passion One', cursive;
+            --font3: "Sriracha", cursive;
+        }
         *{
             margin: 0px; padding: 0px;
+             
         }
         html, body{
             min-height: 100vh;
             background-color: darkgray;
+            font-family: var(--font1);
         }
+     
         header{
             background-color: black;
             color: white;
             text-align: center;
         }
         header > h1{
-            padding-top:50px;
+            padding:50px;
             font-variant: small-caps;
+            font-family: var(--font2);
+            font: 10vw;
+
         }header > p{
             padding-bottom: 50px;
+            font-variant: small-caps;
+            font-family: var(--font2);
+          
         }
         a{
             color: white;
@@ -36,7 +52,11 @@
             padding-bottom: 10vh;
             line-height: 2em;
             padding-left: 30px;
-
+            font-family: var(--font3);
+            
+        }
+        section > p{
+            padding-bottom: 1em;
         }
         section.normal{
             background-color: white;
@@ -45,13 +65,34 @@
         section.imagem{
             background-color: rgb(46, 46, 46);
             color: white;
+            background-size: cover;
+            background-attachment: fixed;
+            box-shadow: inset 6px 6px 13px rgba(27, 27, 27, 0.699);
         }
         section.imagem > p{
             width: 400px;
-            background-color: rgba(49, 49, 49, 0.438);
+            padding: 5px;
+            display: inline-block;
+            background-color: rgba(49, 49, 49, 0.705);
+            text-shadow: 1px 1px 0px black;
+            
+           
         }
 
-
+        section#img01{
+            background-image: url(pacote-d012/imagens/background001.jpg);
+            background-position: right center;
+            
+            text-shadow: 1px 1px 0px black;
+            box-shadow: inset 6px 6px 13px rgba(27, 27, 27, 0.699);
+        }
+        section#img02{
+            background-image: url(pacote-d012/imagens/background002.jpg);
+            background-position: right center;
+            background-size: cover;
+            text-shadow: 1px 1px 0px black;
+            box-shadow: inset 6px 6px 13px rgba(27, 27, 27, 0.699);
+        }
         footer{
             background-color: black;
             color: white;
@@ -62,10 +103,10 @@
 </head>
 <body>
         <header>
-            
+             
             <h1>Cordel Moderno</h1>
-
-            Por <a href="https://www.recantodasletras.com.br/poesias/3186743" target="_blank">Milton Duarte</a>
+            <p>Por <a href="https://www.recantodasletras.com.br/poesias/3186743" target="_blank">Milton Duarte</a></p>
+       
         </header>
         <section class="normal"><p>
             Estou ficando cansado <br>
@@ -78,7 +119,7 @@
         </p>
         </section>    
            
-        <section class="imagem">
+        <section class="imagem" id ="img01">
             <p>
             Não é mais como era antes<br>
             É tudo abreviado<br>
@@ -111,7 +152,7 @@
         </p>
         </section>
           
-        <section class="imagem">
+        <section class="imagem" id ="img02">
             <p>
             Tenho saudade das cartas<br>
             Escritas com a própria mão<br>
